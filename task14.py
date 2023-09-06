@@ -3,8 +3,27 @@
 # Пример
 # Ввод: 17 -> Вывод: 1, 2, 4, 8, 16
 
+# 1 СПОСОБ:
 n = int(input())
 i = 0
 while 2 ** i <= n:
-    print(2 ** i)
+    print(2 ** i, end = ' ')
     i += 1
+
+# 2 СПОСОБ (решение через списки):
+# n = int(input('n: '))
+# i = 0
+# nums = []
+# while 2 ** i <= n:
+#     nums.append(2 ** i)
+#     i += 1
+# print(nums)
+
+# 3 СПОСОБ (решение через словари):
+# n = int(input('n: '))
+# i = 0
+# nums = {}
+# while 2 ** i <= n:
+#     nums[i] = 2**i
+#     i += 1
+# print(nums)

@@ -7,13 +7,26 @@
 #     3
 #     -> 1
 
+# Способ 1:
+# n = int(input("Введите длину списка: "))
+# A = list(map(int, input("Введите элементы массива через пробел: ").split()))
+# x = int(input(("Введите число, которое нужно найти в массиве: ")))
 
-n = int(input())  # количество элементов в массиве
-A = list(map(int, input().split()))  # массив
-x = int(input())  # число, которое нужно найти
+# count = 0  # количество вхождений числа X в массив A
+# for i in range(n):
+#     if A[i] == x:
+#         count += 1
+# print(count)
 
-count = 0  # количество вхождений числа X в массив A
-for i in range(n):
-    if A[i] == x:
-        count += 1
-print(count)
+# Способ 2:
+from random import randint
+
+len_nums = int(input('Введите длину списка: '))
+nums = [randint(1, 100) for i in range(len_nums)]
+print("Список: ", *nums)
+x = int(input('Введите число, которое нужно найти в списке: '))
+
+# easy
+print(f'{x} нашёлся в списке {nums.count(x)} раз')
+# hard
+print(f'{x} нашёлся в списке {len([i for i in nums if i == x])} раз')

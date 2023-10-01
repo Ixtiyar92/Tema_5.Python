@@ -15,7 +15,6 @@ def sum (a: int, b: int):
         return b
     elif b == 0:
         return a
-    else:
-        return sum(a-1, b+1)
+    return sum(a-1, b+1)
 
 print(sum(a,b))

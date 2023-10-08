@@ -7,20 +7,35 @@
 # Ввод: пара-ра-рам рам-пам-папам па-ра-па-дам
 # Вывод: Парам пам-пам
 
-def rhythm(str):
-    str = str.split()
-    list_1 = []
-    for word in str:
-        sum_w = 0
-        for i in word:
-            if i in 'аеёиоуыэюя':
-                sum_w += 1
-        list_1.append(sum_w)
-    return len(list_1) == list_1.count(list_1[0])
+# Способ 1:
+# def rythm(str):
+#     str = str.split()
+#     list_1 = []
+#     for word in str:
+#         sum_w = 0
+#         for i in word:
+#             if i in 'аеёиоуыэюя':
+#                 sum_w += 1
+#         list_1.append(sum_w)
+#     return len(list_1) == list_1.count(list_1[0])
 
 
+# str_1 = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
+# if rythm(str_1):
+#     print('Парам пам-пам')
+# else:
+#     print('Пам парам')
+
+# Способ 2:
+def rythm(phrase: str) -> str:
+    """
+    Проверяет на ритм фразу и возвращает строку 'Парам пам-пам',
+    если с ритмом всё в порядке и 'Пам парам' если ритм нарушен.
+    """
+    vovels = 'аеёиоуыэюя'
+    vovels_count = set(map(lambda x: sum(1 for let in x if let in vovels), phrase.split()))
+    if len(vovels_count) == 1:
+        return 'Парам пам-пам'
+    return 'Пам парам'
 str_1 = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
-if rhythm(str_1):
-    print('Парам пам-пам')
-else:
-    print('Пам парам')
+print(rythm(str_1))

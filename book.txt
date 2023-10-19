@@ -1,0 +1,2 @@
+
+& C:/Users/SmartDevice/AppData/Local/Programs/Python/Python311/python.exe c:/GeekBrains/Tema_5.Python/Tema_5.Python/sem_8_practice/main.py | & C:/Users/SmartDevice/AppData/Local/Programs/Python/Python311/python.exe c:/GeekBrains/Tema_5.Python/Tema_5.Python/sem_8_practice/main.py
